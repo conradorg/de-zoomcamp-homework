@@ -48,11 +48,7 @@ curl -X POST -u 'admin@kestra.io:Admin1234' http://localhost:8080/api/v1/flows/i
 Put necessary variables into the KV store via REST API call:
 ```bash
 curl -X PUT -H "Content-Type: text/plain" -u 'admin@kestra.io:Admin1234' http://localhost:8080/api/v1/main/namespaces/zoomcamp/kv/GCP_PROJECT_ID -d \"$TF_VAR_project\"
-
 curl -X PUT -H "Content-Type: text/plain" -u 'admin@kestra.io:Admin1234' http://localhost:8080/api/v1/main/namespaces/zoomcamp/kv/GCP_DATASET -d \"$TF_VAR_bq_dataset_name\"
-
-# curl -X PUT -H "Content-Type: text/plain" -u 'admin@kestra.io:Admin1234' http://localhost:8080/api/v1/main/namespaces/zoomcamp/kv/GCP_LOCATION -d \"$TF_VAR_project\"
-
 curl -X PUT -H "Content-Type: text/plain" -u 'admin@kestra.io:Admin1234' http://localhost:8080/api/v1/main/namespaces/zoomcamp/kv/GCP_BUCKET_NAME -d \"$TF_VAR_gcs_bucket_name\"
 
 ```
