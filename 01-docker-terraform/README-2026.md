@@ -199,7 +199,7 @@ Then destroy
 ```bash
 terraform destroy
 # OR
-terraform destory -var "credentials=<your-credentials-file>"
+terraform destroy -var "credentials=<your-credentials-file>"
 ```
 ---
 ### Answer to the question

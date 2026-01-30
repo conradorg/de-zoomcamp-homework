@@ -55,13 +55,15 @@ services:
     ### Our base image runs without root, but the Docker Compose implementation needs root to access the Docker socket
     ### To run Kestra in a rootless mode in production, see: https://kestra.io/docs/installation/podman-compose
     
-    # This will be run NOT as root:
+    # This will NOT be run as root:
     user: "1000:1000"
     command: server standalone
     volumes:
       - kestra_data:/app/storage
       # Do NOT mount docker.sock
       # - /tmp/kestra-wd:/tmp/kestra-wd  # will not mount this (this is only kestras storage for downloaded data files, temporary files etc., if not mounted will not be persistent)
+    env_file:
+    - .env_encoded
     environment:
       KESTRA_CONFIGURATION: |
         datasources:
