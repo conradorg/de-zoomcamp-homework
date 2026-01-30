@@ -1,3 +1,20 @@
+# Additional ===========
+# environment
+.env*
+
+# terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# downloaded files
+*.csv
+*.parquet
+
+# ======================
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
